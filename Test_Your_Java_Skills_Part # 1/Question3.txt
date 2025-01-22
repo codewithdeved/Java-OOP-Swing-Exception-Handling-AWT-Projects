@@ -1,0 +1,66 @@
+Q.No.3 (10 Marks)
+
+(a) Explain the concept of abstraction in Java, and also discuss the advantage and disadvantage of 
+using over other OOP principles. (4 Marks)
+
+Answer:-
+
+Abstraction: is the OOP principle of hiding implementation details while showing only the essential functionality. 
+It can be achieved using abstract classes and interfaces.
+
+Example:
+
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() { 
+        System.out.println("Drawing Circle"); 
+    }
+}
+
+Advantages:
+1. Reduces complexity by hiding details.
+2. Improves code reusability and maintainability.
+
+Disadvantages:
+1. Increased complexity when implementing abstract methods.
+2. Requires careful design to ensure proper functionality.
+
+(b) Write a Java program with a superclass Bird that has a method speak(), along with subclasses Parrot and Eagle. 
+Demonstrate polymorphism. (6 Marks)
+
+class Bird {
+    void speak() {
+        System.out.println("Bird is speaking");
+    }
+}
+
+class Parrot extends Bird {
+    @Override
+    void speak() {
+        System.out.println("Parrot says: Hello!");
+    }
+}
+
+class Eagle extends Bird {
+    @Override
+    void speak() {
+        System.out.println("Eagle says: Screech!");
+    }
+}
+
+public class BirdDemo {
+    
+    public static void main(String[] args) {
+    
+        Bird myBird1 = new Parrot();
+        Bird myBird2 = new Eagle();
+
+        myBird1.speak();
+        myBird2.speak();
+
+    }
+
+}

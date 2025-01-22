@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "StudentManagementSystem",
+            "request": "launch",
+            "mainClass": "StudentManagementSystem",
+            "classPaths": [
+                "C:/Users/TAYYAB/OneDrive/Desktop/Java SQLITE jdbc/sqlite-jdbc-master/lib/sqlite-jdbc-3.48.0.0.jar"
+            ]
+        }
+    ]
+}

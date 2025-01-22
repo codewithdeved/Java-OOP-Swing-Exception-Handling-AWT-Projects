@@ -1,0 +1,39 @@
+// Valid Cases of Method and Constructor Overloading:
+
+System.out.println("Name: Tayyab Ali. RollNo: 2024S-BSET-003.");
+
+1. Different Number of Parameters
+void display(int a) {} void display(int a, int b) {}
+
+2. Different Types of Parameters
+void print(String text) {} void print(int number) {}
+
+3. Different Order of Parameters
+void process(int a, String b) {} void process(String b, int a) {}
+
+4. Overloading Constructors with Different Parameters
+class Sample {
+    Sample() {} Sample(int a) {} Sample(String s, int a) {}
+}
+
+5. Overloading with Varargs
+void calculate(int... numbers) {} void calculate(int a, int b) {}
+
+Invalid Cases of Method and Constructor Overloading:
+
+1. Same Method Name, Same Parameter Types and Order
+void show(int a) {} void show(int a) {} Invalid: Duplicate method
+
+2. Only Changing Return Type
+int compute(int a) { return a; } double compute(int a) { return a; } // Invalid: Ambiguity
+
+3. Only Changing Parameter Names
+void update(int a) {} void update(int b) {} Invalid: Duplicate method
+
+4. Constructors with Identical Parameter Types
+class Example {
+    Example(int a) {} Example(int b) {} Invalid: Duplicate constructor
+}
+
+5. Overloading with Only Access Modifiers Changed
+public void run(int a) {} private void run(int a) {} Invalid: Duplicate method

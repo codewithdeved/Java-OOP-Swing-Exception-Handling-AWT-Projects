@@ -1,0 +1,61 @@
+Q.No.1 (10 Marks)
+
+(a) Explain the concept of Java data types and provide examples of primitive and non-primitive data types. (4 Marks)
+
+Answer:-
+    Java Data Types: Java provides data types to classify different kinds of data. They are divided into two categories:
+    Primitive Data Types: These are predefined by Java.
+    Examples:
+    byte (8 bits, stores integers from -128 to 127).
+    short (16 bits, range -32,768 to 32,767).
+    int (32 bits, e.g., 5, 10).
+    long (64 bits).
+    float (32-bit decimal, e.g., 3.14f).
+    double (64-bit, e.g., 3.1415).
+    char (stores single characters, e.g., 'A').
+    boolean (stores true or false).
+    Non-Primitive Data Types: These are user-defined or derived.
+    Examples:
+    String: Holds a sequence of characters.
+    Array: Collection of elements, e.g., int[] arr = {1, 2, 3}.
+    Class: Template for objects.
+    Object: An instance of a class.
+
+(b) Illustrate a Java program that: (6 Marks)
+
+1. Accepts an array of integers from the user.
+2. Finds the second largest number in the array.
+3. Calculates the sum of all even numbers in the array.
+
+package MidtermPaper;
+
+public class ArrayOfIntegers {
+    
+    public static void main(String[] args) {
+
+        int[] integers = { 1, 2, 3, 4, 5, 6 };
+
+        int largestNumber = integers[0],
+                secondLargestNumber = integers[0],
+                sumOfAllEvenNumbers = 0;
+
+        for (int integer : integers) {
+
+            if (integer > largestNumber) {
+                secondLargestNumber = largestNumber;
+                largestNumber = integer;
+            } else if (integer > secondLargestNumber && integer < largestNumber) {
+                secondLargestNumber = integer;
+            }
+
+            if (integer % 2 == 0) {
+                sumOfAllEvenNumbers += integer;
+            }
+        }
+
+        System.out.println("Second Largest Number: " + secondLargestNumber);
+        System.out.println("Sum of Even Numbers: " + sumOfAllEvenNumbers);
+
+    }
+
+}

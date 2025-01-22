@@ -1,0 +1,36 @@
+// List down 10 built-in methods in Java.
+
+System.out.println("Name: Tayyab Ali. RollNo: 2024S-BSET-003.");
+
+1. String.length() Returns the length of the string.
+    int len = myString.length();
+
+2. String.toUpperCase() Converts the string to uppercase.
+    String upperStr = myString.toUpperCase();
+
+3. String.replace(char oldChar, char newChar) Replaces 'a' with 'e' in the string.
+    String replacedStr = myString.replace('a', 'e');
+
+4. StringBuffer.append(String str) Appends " World" to the buffer.
+    StringBuffer sb = new StringBuffer("Hello");
+    sb.append(" World");
+
+5. StringBuffer.reverse() Reverses the content of the buffer.
+    StringBuffer sb = new StringBuffer("Hello");
+    sb.reverse();
+
+6. Arrays.sort(int[] a) Sorts the array in ascending order.
+    int[] arr = { 3, 1, 2 };
+    Arrays.sort(arr);
+
+7. Arrays.binarySearch(int[] a, int key) Searches for '2' in the sorted array and returns its index.
+    int index = Arrays.binarySearch(arr, 2);
+
+8. Arrays.toString(int[] a) Returns a string representation of the array.
+    String arrStr = Arrays.toString(arr);
+
+9. Arrays.copyOf(int[] original, int newLength) Copies array to a new array of length 5.
+    int[] newArr = Arrays.copyOf(arr, 5);
+
+10. String.split(String regex) Splits the string by commas and stores the parts in an array.
+    String[] parts = myString.split(",");

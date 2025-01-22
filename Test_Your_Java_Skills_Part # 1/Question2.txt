@@ -1,0 +1,62 @@
+Q.No.2 (10 Marks)\
+
+(a) Identify the difference between a class and an object in Java. How are they relatable? (4 Marks)
+
+Answer:-
+
+Class: A class is a blueprint or template for creating objects. It defines properties (fields) and behaviors (methods) 
+that objects of the class share.
+
+Example:
+
+class Car {
+    String model;
+    void display() { System.out.println("Car Model: " + model); }
+}
+
+Object: An object is an instance of a class. It has a state (data) and behavior (methods).
+
+Example:
+
+Car myCar = new Car();
+myCar.model = "Tesla";
+myCar.display();
+
+Relation: Objects are created based on the structure defined by a class.
+
+(b) Construct the following pattern while using Java:
+
+    1  
+   121  
+  12321  
+ 1234321
+
+package MidtermPaper;
+
+public class Pattern {
+
+    public static void main(String[] args) {
+
+        int n = 4;
+
+        for (int i = 1; i <= n; i++) {
+
+            for (int j = i; j < n; j++) {
+                System.out.print(" ");
+            }
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j);
+            }
+
+            for (int j = i - 1; j >= 1; j--) {
+                System.out.print(j);
+            }
+
+            System.out.println();
+
+        }
+
+    }
+
+}
